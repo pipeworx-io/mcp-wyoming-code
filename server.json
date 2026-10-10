@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/wyoming-code",
+  "title": "Wyoming Code",
+  "description": "Wyoming Statutes (W.S.) — state statutes by citation and by topic.",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/wyoming-code",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-wyoming-code",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/wyoming-code/mcp"
+    }
+  ]
+}

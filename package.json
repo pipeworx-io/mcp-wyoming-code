@@ -1,0 +1,32 @@
+{
+  "name": "@pipeworx/mcp-wyoming-code",
+  "version": "0.1.0",
+  "description": "Wyoming Statutes (W.S.) — state statutes by citation and by topic.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "bin": {
+    "mcp-wyoming-code": "bin/cli.js"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "wyoming-code"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-wyoming-code.git"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-f6b49b73adf6b1d94e8ad6b369def4000adcc9272724a61e4a8836cd6788ea63",
+    "sourceCommit": "1f9b4f362b4a15045caeef1caed5dc906f85b9d1"
+  }
+}
