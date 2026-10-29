@@ -1,0 +1,38 @@
+[
+  {
+    "name": "wy_statute",
+    "description": "Get the FULL TEXT of a section of the Wyoming Statutes (W.S.) — Wyoming state law — by citation. \"6-2-101\" is murder in the first degree (Title 6, Crimes and Offenses); \"20-1-105\" is divorce grounds (Title 20). Accepts natural forms: \"6-2-101\", \"W.S. 6-2-101\", \"§ 6-2-101\". Returns the current statutory text, the section heading, and — where the source carries one cleanly — an enactment/amendment \"history\" note; many sections have no such note (Wyoming does not uniformly separate amendment history from body text). Wyoming publishes the CURRENT edition only; no historical/prior-year version is available online. Title 97 (the Constitution) is not covered — it uses \"Article N, Section N\" citations, a different scheme. Keyless. Use for \"what does W.S. 6-2-101 say\" or to check a Wyoming statute a case or contract relies on.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "citation": {
+          "type": "string",
+          "description": "Section citation, e.g. \"6-2-101\" (murder) or \"20-1-105\" (divorce grounds). Title-chapter-section, dash separated; a few titles carry a decimal (e.g. \"34.1-1-101\", Uniform Commercial Code)."
+        }
+      },
+      "required": [
+        "citation"
+      ]
+    }
+  },
+  {
+    "name": "wy_search",
+    "description": "Search the Wyoming Statutes BY TOPIC or keyword rather than citation — \"landlord security deposit\", \"concealed firearm permit\", \"murder penalty\". Full-text search over the statutory body text across all titles (except Title 97, the Constitution). Returns matching citations and headings; call wy_statute with a citation for the full text. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Topic or keywords, e.g. \"landlord security deposit\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results, default 10, max 25."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  }
+]

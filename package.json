@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-wyoming-code",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Wyoming Statutes (W.S.) — state statutes by citation and by topic. Fleet #2744.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-wyoming-code": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "wyoming-code"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-wyoming-code.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/wyoming-code",
   "pipeworx": {
-    "sourceHash": "v1-5c4cdb36bf696b065ff137076817e9cc21bff7d27f4185c7a564dd98f8e8361e",
-    "sourceCommit": "a03f96ed672b8c149593c64ecbf30280cabf084c"
+    "mode": "gateway",
+    "slug": "wyoming-code",
+    "gatewaySlug": "wyoming-code",
+    "sourceHash": "v1-9a92f7bf7f32cce5201d4dfb15080deeaec41d21bb36bb93efa712d46c3a380c",
+    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
   }
 }
