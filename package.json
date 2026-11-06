@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-wyoming-code",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Wyoming Statutes (W.S.) — state statutes by citation and by topic. Fleet #2744.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "wyoming-code",
     "gatewaySlug": "wyoming-code",
-    "sourceHash": "v1-9a92f7bf7f32cce5201d4dfb15080deeaec41d21bb36bb93efa712d46c3a380c",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-06e3d8b75b08a8e385c39f7c549296201f0138c3e37402d3be09cffd54e8e8c3",
+    "sourceCommit": "78b905fa3a6880dfb85c79150f4bffe8cf50ef00"
   }
 }
